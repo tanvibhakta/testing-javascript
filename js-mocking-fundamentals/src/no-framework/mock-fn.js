@@ -12,7 +12,7 @@ function fn(impl) {
 }
 
 const originalGetWinner = utils.getWinner
-utils.getWinner = fn((p1, p2) => p1)
+utils.getWinner = jest.fn((p1, p2) => p1)
 
 const winner = thumbWar('Kent C. Dodds', 'Ken Wheeler')
 assert.strictEqual(winner, 'Kent C. Dodds')
